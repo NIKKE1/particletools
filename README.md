@@ -1,9 +1,10 @@
 # particletools
 
 
-# Event inspector:
+## Event inspector:
 
-run: python3 event_inspector.py
+run: python3 event_inspector.py .
+
 Calculates delta_R for particles based on particle id, mass, and process cuts. 
 Calculates density of selected particles, and plots them on a Particle id/mass -axis.
 
