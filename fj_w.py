@@ -51,9 +51,7 @@ def main():
     df_LL = data_loader(key, FILE_LL)
     df_TT = data_loader(key, FILE_TT)
 
-    print(f"Cut-Check: Before 200GeV cut {df_LL.shape[0]}")
     df_LL = _200cut(df_LL)
-    print(f"After 200GeV cut {df_LL.shape[0]}")
     df_TT = _200cut(df_TT)
 
     mass_LL, delr_LL = particle_iterator(df=df_LL, func=w_fj_deltar)
