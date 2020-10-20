@@ -146,12 +146,9 @@ def w_fj_deltar(dataf):
                 fj_mass.append((event.FatJet_mass[min_index]).item())
                 del_r.append(min_value)
 
-    #print(f"type of delr {type(del_r)} and len {len(del_r)}")
-    #print(f"type of fj {type(fj_mass)} and len {len(fj_mass)}")
     combined_list = zip(fj_mass, del_r) #need to do for Pool to work (?)
-    print(f"fj mass{len(fj_mass)} ")
-    print(f"del_r{len(del_r)} \n")
-   # print(f"type of combined list {combined_list}")
+
+
     return combined_list
 
 def deltaR(eta1, phi1, eta2, phi2):
