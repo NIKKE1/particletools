@@ -69,11 +69,11 @@ def _200cut(df):
     """
     pt = df['FatJet_pt'].explode()
     mass = df['FatJet_mass']
-    print(f"DF shape before {df.shape[0]}")
+    print(f"DF shape before {df.shape[0]}: ")
     df = df.drop(pt[pt<200].index) #dropping dataframe rows with FatJet_pt's less than 200
-    print(f"DF shape after 200GeV cut {df.shape[0]}")
+    print(f"DF shape after 200GeV cut {df.shape[0]}: ")
     df = df.drop(mass[mass.str.len().eq(0)].index)
-    print(f"DF shape after removing events with len(FatJets)==0 {df.shape[0]}")
+    print(f"DF shape after removing events with len(FatJets)==0 {df.shape[0]}: ")
     print(df.shape[0])
 
     return df
