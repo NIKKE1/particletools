@@ -127,7 +127,7 @@ def w_fj_deltar(dataf):
         bitwise_list = np.bitwise_and(event.GenPart_statusFlags, 0b1000_0000)
 
         for i, w_boson in enumerate(event.GenPart_pdgId):
-            if w_boson==24 and (event.GenPart_mass[i]>0) and (bitwise_list[i] == 128 ):
+            if ((w_boson==24) and (w_boson==-24)) and (event.GenPart_mass[i]>0) and (bitwise_list[i] == 128 ):
                 w_eta.append(event.GenPart_eta[i])
                 w_phi.append(event.GenPart_phi[i])
 
